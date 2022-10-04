@@ -12,12 +12,13 @@ const router = express.Router();
 router
 .route("/")
 .get(tourController.getTours)
-.post(tourController.checkBody,tourController.postTours);
+.post(tourController.createTour);
 
 router
   .route("/:id")
-  .get(tourController.getSingleTour)
-  .delete(tourController.deleteSingleTour);
+  .get(tourController.getTour)
+  .delete(tourController.deleteTour)
+  .patch(tourController.updateTour)
 
 //exporting
 module.exports = router;

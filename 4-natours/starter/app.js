@@ -28,8 +28,8 @@ app.use((req, res, next) => {
 });
 
 //Routes
-app.use("/api/adan/tours", tourRouter);
-app.use("/api/adan/users", userRouter);
+app.use("/api/v1/tours", tourRouter);
+app.use("/api/v1/users", userRouter);
 
 //Exports
 
